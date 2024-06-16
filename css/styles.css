@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark: #2B3541;
+    --yellow: #FBF138;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1143px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.header {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    width: 97px;
+    height: 30px;
+    background-image: url(/img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.nav a:not(:last-child){
+    margin-right: 54px;
+}
+
+.nav-link {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.email {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--dark);
+    text-decoration: none;
+    position: relative;
+}
+
+.email::before {
+    content: '';
+    display: block;
+    background-color: var(--yellow);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: -1;
+    left: -14px;
+
+}
+
+/* Главный блок */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.hero-text {
+    flex-basis: 60%;
+}
+
+.hero-bg {
+    height: clamp(493px, 50vw, 852px);
+    flex-basis: calc(40% - 20px);
+    background: linear-gradient(90deg, #fbf138 0%, rgba(253, 249, 182, 0.45) 100%);
+    opacity: 0.2;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: clamp(26px, 4.5vw, 48px);
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--dark);
+    max-width: 635px;
+}
+
+.hero-description {
+    font-size: 40px;
+    line-height: 125%;
+    color: var(--dark);
+    margin: 0;
+}
+
+.hero-description span:not(:last-child) {
+    margin-right: 16px;
+}
+
+.hero-dop-text {
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.hero-dop-description {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--dark);
+    max-width: 300px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.hero-link {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark);
+    padding: 20px 30px;
+    background-color: var(--yellow);
+    box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
+}
+
+.hero-girl {
+    position: absolute;
+    right: -12vw;
+    bottom: 0;
+    width: clamp(399px, 50vw, 996px);
+}
