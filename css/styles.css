@@ -81,10 +81,18 @@ body {
     align-items: center;
     gap: 20px;
     position: relative;
+    max-height: 852px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-text {
     flex-basis: 60%;
+    align-items: center;
 }
 
 .hero-bg {
@@ -143,9 +151,24 @@ body {
     box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
 }
 
+.hero-img {
+    position: relative;
+}
+
 .hero-girl {
     position: absolute;
     right: -12vw;
     bottom: 0;
     width: clamp(399px, 50vw, 996px);
+}
+
+.hero-arrow {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-image: url(/img/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 0;
 }
