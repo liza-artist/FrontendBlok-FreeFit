@@ -11,6 +11,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background: #FEFCFE;
 }
 
 .container {
@@ -319,6 +320,7 @@ body {
 
 .authorization {
     background: var(--grey);
+    margin-bottom: 158px;
 }
 
 .form {
@@ -351,4 +353,118 @@ body {
     box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.2);
     background: var(--yellow);
     border: none;
+}
+
+.input-form {
+    max-width: 300px;
+    width: 100%;
+    padding: 19px;
+    font-size: 18px;
+    color: var(--dark);
+    background: #fff;
+    margin-bottom: 13px;
+}
+
+label {
+    font-size: 11px;
+    color: var(--dark);
+}
+
+label a {
+    font-size: 11px;
+    color: var(--dark);
+}
+
+/* О компании */
+
+.about {
+    margin-bottom: 170px;
+}
+
+.about-block-01 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.about-text {
+    font-size: 18px;
+    color: var(--dark);
+    max-width: 483px;
+    padding-bottom: 34px;
+}
+
+.about-link {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark);
+    font-weight: 700;
+    padding: 22px 51px;
+    background: var(--yellow);
+    box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.2);
+    text-decoration: none;
+}
+
+.about-img {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/about-girl.png);
+    width: 581px;
+    height: 336px;
+}
+
+.about-block-02 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-text-01 {
+    max-width: 229px;
+}
+
+.data-text-02 {
+    max-width: 265px;
+}
+
+.data-text-03 {
+    max-width: 200px;
+}
+
+.data-text-04 {
+    max-width: 204px;
+}
+
+/* footer */
+
+.footer {
+    background: var(--grey);
+}
+
+.footer-block-01 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+
+.footer-block-02 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--dark);
+}
+
+.footer-link {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--dark);
 }
