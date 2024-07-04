@@ -12,6 +12,8 @@
 body {
     font-family: "Montserrat", sans-serif;
     background: #FEFCFE;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .container {
@@ -75,7 +77,6 @@ body {
     position: absolute;
     z-index: -1;
     left: -14px;
-
 }
 
 /* Главный блок */
@@ -163,12 +164,13 @@ body {
 
 .hero-girl {
     position: absolute;
-    right: -9vw;
+    right: -12vw;
     bottom: 0;
-    width: clamp(399px, 50vw, 996px);
+    width: clamp(399px, 60vw, 996px);
 }
 
 .hero-arrow {
+    position: absolute;
     display: block;
     width: 55px;
     height: 55px;
@@ -176,7 +178,6 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     bottom: 0;
-    left: 0;
 }
 
 /* Расписание */
@@ -333,8 +334,21 @@ body {
 
 ._form {
     padding-top: 80px;
-    padding-bottom: 40px;
+    padding-bottom: 7px;
     text-align: center;
+    position: relative;
+}
+
+._form::before {
+    content: '';
+    display: block;
+    background-color: var(--yellow);
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
 }
 
 .form > div {
@@ -342,6 +356,7 @@ body {
 }
 
 .form-btn {
+    height: 65px;
     flex-basis: 255px;
     font-weight: 700;
     font-size: 16px;
@@ -358,11 +373,12 @@ body {
 .input-form {
     max-width: 300px;
     width: 100%;
-    padding: 19px;
+    padding: 19px 19px 24px 28px;
     font-size: 18px;
     color: var(--dark);
     background: #fff;
     margin-bottom: 13px;
+    border: none;
 }
 
 label {
@@ -467,4 +483,56 @@ label a {
     font-size: 14px;
     line-height: 150%;
     color: var(--dark);
+}
+
+@media(max-width: 1185px) {
+    .hero-title {
+        font-size: clamp(26px, 3.5vw, 48px);
+    }
+    .hero-arrow {
+        width: 45px;
+        height: 45px;
+    }
+    .hero-girl {
+        right: -5vw;
+    }        
+    .hero-description {
+        font-size: 30px;
+    }
+    .hero-dop-text {
+        padding-left: 50px;
+    }
+}
+
+@media(max-width: 995px) {
+    .hero-title {
+        font-size: clamp(26px, 3.2vw, 48px);
+    }
+    .hero-description {
+        font-size: 25px;
+    }
+    .title-h3 {
+        font-size: 20px;
+    }
+    .text-block-02 {
+        font-size: 18px;
+    }
+    .data-text-01 {
+        max-width: 209px;
+    }
+    .data-text-02 {
+        max-width: 229px;
+    }
+    .data-text-04 {
+        max-width: 194px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+}
+
+
+
+@media(max-width: 846px) {
+
 }
