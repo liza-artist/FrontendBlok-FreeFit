@@ -6,6 +6,8 @@
     --black: #010101;
     --liner: linear-gradient(180deg, #fbf138 0%, rgba(253, 249, 182, 0.45) 100%);
     --grey: #f3f3f3;
+
+    --tr: .2s;
 }
 
 
@@ -25,14 +27,12 @@ body {
     box-sizing: border-box;
 }
 
-.header {
-    padding-top: 50px;
-    padding-bottom: 30px;
-}
-
 .header-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 45px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .logo {
@@ -43,6 +43,17 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
+}
+
+.burger-menu {
+    display: none;
+    width: 29px;
+    height: 22px;
+    background-image: url(../img/burger.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
 }
 
 .nav a:not(:last-child){
@@ -197,10 +208,14 @@ body {
     line-height: 125%;
     color: var(--dark);
     font-weight: 700;
+    max-width: 663px;
+    margin: auto;
+    z-index: 1;
 }
 
 ._schedule{
     max-width: 277px;
+    margin-left: 0;
 }
 
 .text-scheduble {
@@ -349,6 +364,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
+    left: 13px;
+    top: 62px;
+    z-index: -1;
 }
 
 .form > div {
@@ -369,6 +387,76 @@ body {
     background: var(--yellow);
     border: none;
 }
+
+.checkbox:checked,
+.checkbox:not(:checked){
+   position: absolute;
+   left:-9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+   position: relative;
+   padding-left: 35px;
+   cursor:pointer;
+}
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
+.checkbox:checked + label::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left:0;
+    top:calc(50% - 10px);
+    background-color: #2B3541;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+ }
+ /* Стили для псевдоэлемента after с изображением, когда пункт активен */
+ .checkbox:checked + label::after{
+    content:'';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrow_check.svg);
+ }
+ /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
+ .checkbox:not(:checked) + label::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left:0;
+    top:calc(50% - 10px);
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+ }
+ /* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
+ .checkbox:not(:checked) + label::after{
+    content:'';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 0;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-position: 0 -12px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/arrow_check.svg);
+ }
+ .radio:checked + label::before{
+    border-radius: 100%;
+ }
+ 
 
 .input-form {
     max-width: 300px;
@@ -436,6 +524,7 @@ label a {
 .about-block-02 {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .data-text-01 {
@@ -485,7 +574,24 @@ label a {
     color: var(--dark);
 }
 
+.footer-description {
+    display: none;
+    font-size: 10px;
+    line-height: 150%;
+    color: var(--dark);
+}
+
 @media(max-width: 1185px) {
+    .hero-title {
+        font-size: clamp(26px, 3.5vw, 48px);
+    }
+    .hero-arrow {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/*@media(max-width: 1185px) {
     .hero-title {
         font-size: clamp(26px, 3.5vw, 48px);
     }
@@ -505,6 +611,9 @@ label a {
 }
 
 @media(max-width: 995px) {
+    ._savings {
+        max-width: 178px;
+    }
     .hero-title {
         font-size: clamp(26px, 3.2vw, 48px);
     }
@@ -531,8 +640,172 @@ label a {
     }
 }
 
+@media(max-width: 878px) {
+    .about-text {
+        max-width: 439px;
+    }
+    .about-block-01 {
+        margin-bottom: 0;
+    }
+}*/
 
+@media(max-width: 768px) {
+    .burger-menu {
+        display: block;
+        flex-grow: 1;
+    }
+    .header-wrapper {
+        padding-top: 35px;
+        padding-bottom: 40px;
+        gap: 38px;
+    }
+    .nav {
+        display: none;
+    }
+    .hero {
+        margin-bottom: 70px;
+    }
+    .hero-dop-description {
+        font-size: 16px;
+    }
+    .hero-description {
+        font-size: 26px;
+    }
+    .hero-dop-text {
+        padding-left: 0;
+    }
+    .hero-bg {
+        width: 335px;
+        max-height: 400px;
+    }
+    .hero-girl {
+        right: -3vw;
+        max-width: 370px;
+    }
+    .hero-arrow {
+        bottom: -5vh;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 224px);
+        grid-template-areas: "a b" "c d" "e f";}
 
-@media(max-width: 846px) {
+    .schedule {
+        margin-bottom: 97px;
+    }
 
+    .authorization {
+        margin-bottom: 90px;
+    }
+    .about-block-02 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+        .data-text-01 {
+            max-width: 215px;
+        }
+        .data-text-02 {
+            max-width: 281px;
+        }
+    .about {
+        margin-bottom: 76px;
+    }
+    .footer-block-02{
+        display: none;
+    }
+    ._footer-em {
+        display: none;
+    }
+    .footer-block-01 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 20px 15px;
+    }
+    .footer-description {
+        display: block;
+    }
+    .modal {
+        width: 100%;
+        max-width: 567px;
+        background-color: var(--grey);
+        padding: 38px 10px;
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        transition: var(--tr);
+    }
+    .logo._logo-modal {
+        width: 78px;
+        height: 24px; 
+        position: absolute;
+        top: 29px;
+        left: 10px;
+    }
+    .modal-close {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 34px;
+        right: 10px;
+    }
+    .nav._modal {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    ._modal-link{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--dark);
+    }
+    .nav-link::after {
+        display: none;
+    }
+    /* поправить. Поставить навигацию слева*/
+    .nav._modal .nav-link{
+        display: block;
+    }
+    .nav._modal a:not(:last-child) {
+        padding-right: 0;
+    }
+}
+
+@media(max-width: 660px) {
+    .hero-title {
+        font-size: clamp(22px, 4.5vw, 48px);
+    }
+    .hero-description {
+        font-size: 20px;
+    }
+    .hero-link {
+        padding: 20px;
+    }
+    .hero-girl {
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 612px) {
+    .grid-text {
+        font-size: 16px;
+    }
+    .grid-title {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 360px) {
+    .hero-img {
+        display: none;
+    }
 }

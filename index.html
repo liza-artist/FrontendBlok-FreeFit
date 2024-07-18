@@ -13,6 +13,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo"></div>
+                <button class="burger-menu" onclick="openModal()"></button>
                 <nav class="nav">
                     <a href="#" class="nav-link">Мероприятия</a>
                     <a href="#" class="nav-link">Расписание</a>
@@ -115,7 +116,7 @@
         <div class="container">
             <h2 class="title-h2 _form">Подпишитесь на рассылку</h2>
             <form action="" class="form">
-                <div class="">
+                <div class="form-date">
                     <input class="input-form" type="email" placeholder="Ваш e-mail">
                     <div class="agreement">
                         <input type="checkbox" id="01" class="checkbox">
@@ -134,7 +135,7 @@
             <div class="about-block-01">
                 <div class="about-data">
                     <h2 class="title-h2">О компании</h2>
-                    <p class="about-text">Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с нами и вы сами увидите, что мы проводим не только онлайн-тренировки.</p>
+                    <p class="about-text">Наша компания является одной из&nbsp;немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и&nbsp;вы&nbsp;сами увидите, что мы&nbsp;проводим не&nbsp;только онлайн-тренировки.</p>
                     <a href="#" class="about-link">Записаться</a>
                 </div>
                 <div class="about-img"></div>
@@ -149,7 +150,7 @@
                     <p class="text-block-02">Внимание тренера пренадлежит только вам</p>
                 </div>
                 <div class="data-text-03">
-                    <h3 class="title-h3">Экономия денег</h3>
+                    <h3 class="title-h3 _savings">Экономия денег</h3>
                     <p class="text-block-02">Средняя цена одной тренировки - 700₽</p>
                 </div>
                 <div class="data-text-04">
@@ -171,7 +172,8 @@
                     <a href="#" class="nav-link">Расписание</a>
                     <a href="#" class="nav-link">О компании</a>
                 </nav>
-                <a href="mailto:info@freefit.com" class="email">info@freefit.com</a>  
+                <a href="mailto:info@freefit.com" class="email _footer-em">info@freefit.com</a>  
+                <p class="footer-description">Сделано в рамках курса учебной платформы You Can Code</p>
             </div>
             <div class="footer-block-02">
                 <p class="footer-text">© 2022, Все права защищены</p>
@@ -179,5 +181,18 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="logo _logo-modal"></div>
+        <nav class="nav _modal">
+            <a href="#" class="nav-link _modal-link">Мероприятия</a>
+            <a href="#" class="nav-link _modal-link">Расписание</a>
+            <a href="#" class="nav-link _modal-link">О компании</a>
+        </nav>
+        <button class="modal-close"  onclick="closeModal()"></button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+
 </body>
 </html>
