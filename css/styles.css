@@ -128,6 +128,8 @@ body {
     text-transform: uppercase;
     color: var(--dark);
     max-width: 635px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .hero-description {
@@ -581,6 +583,34 @@ label a {
     color: var(--dark);
 }
 
+/* Modal */
+.modal {
+    width: 100%;
+    max-width: 567px;
+    background-color: var(--grey);
+    padding: 38px 10px;
+    position: absolute;
+    top: -400px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: var(--tr);
+}
+.modal-close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 34px;
+    right: 10px;
+}
+
 @media(max-width: 1185px) {
     .hero-title {
         font-size: clamp(26px, 3.5vw, 48px);
@@ -591,65 +621,22 @@ label a {
     }
 }
 
-/*@media(max-width: 1185px) {
-    .hero-title {
-        font-size: clamp(26px, 3.5vw, 48px);
-    }
-    .hero-arrow {
-        width: 45px;
-        height: 45px;
-    }
+@media(max-width: 1100px) {
     .hero-girl {
-        right: -5vw;
-    }        
-    .hero-description {
-        font-size: 30px;
-    }
-    .hero-dop-text {
-        padding-left: 50px;
+        right: -3vw;
     }
 }
 
-@media(max-width: 995px) {
-    ._savings {
-        max-width: 178px;
-    }
-    .hero-title {
-        font-size: clamp(26px, 3.2vw, 48px);
-    }
-    .hero-description {
-        font-size: 25px;
-    }
-    .title-h3 {
-        font-size: 20px;
-    }
-    .text-block-02 {
-        font-size: 18px;
-    }
-    .data-text-01 {
-        max-width: 209px;
-    }
-    .data-text-02 {
-        max-width: 229px;
-    }
-    .data-text-04 {
-        max-width: 194px;
+@media(max-width: 905px) {
+    .hero-bg {
+        width: 400px;
     }
     .nav-link {
         font-size: 16px;
     }
 }
 
-@media(max-width: 878px) {
-    .about-text {
-        max-width: 439px;
-    }
-    .about-block-01 {
-        margin-bottom: 0;
-    }
-}*/
-
-@media(max-width: 768px) {
+@media(max-width: 855px) {
     .burger-menu {
         display: block;
         flex-grow: 1;
@@ -725,38 +712,12 @@ label a {
     .footer-description {
         display: block;
     }
-    .modal {
-        width: 100%;
-        max-width: 567px;
-        background-color: var(--grey);
-        padding: 38px 10px;
-        position: absolute;
-        top: -400px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        box-sizing: border-box;
-        transition: var(--tr);
-    }
     .logo._logo-modal {
         width: 78px;
         height: 24px; 
         position: absolute;
         top: 29px;
         left: 10px;
-    }
-    .modal-close {
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: url(../img/close.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        top: 34px;
-        right: 10px;
     }
     .nav._modal {
         display: flex;
@@ -771,7 +732,6 @@ label a {
     .nav-link::after {
         display: none;
     }
-    /* поправить. Поставить навигацию слева*/
     .nav._modal .nav-link{
         display: block;
     }
@@ -780,18 +740,32 @@ label a {
     }
 }
 
+@media(max-width: 675px) {
+    .hero-bg {
+        width: 300px;
+        max-height: 328px;
+    }
+}
+
 @media(max-width: 660px) {
     .hero-title {
         font-size: clamp(22px, 4.5vw, 48px);
+    }
+    .title-h2 {
+        font-size: 33px;
     }
     .hero-description {
         font-size: 20px;
     }
     .hero-link {
         padding: 20px;
+        font-size: 12px;
     }
     .hero-girl {
-        max-width: 350px;
+        max-width: 300px;
+    }
+    .checkbox:not(:checked) + label {
+        padding-left: 25px;
     }
 }
 
@@ -802,10 +776,168 @@ label a {
     .grid-title {
         font-size: 15px;
     }
+    .hero-link {
+        padding: 14px;
+    }
+    .hero-girl {
+        max-width: 270px;
+    }
 }
 
 @media(max-width: 360px) {
+    .logo {
+        width: 78px;
+        height: 14px;
+    }
+    .email {
+        font-size: 14px;
+    }
+    .burger-menu {
+        width: 29px;
+        height: 22px;
+    }
     .hero-img {
         display: none;
     }
+    .header-wrapper {
+        margin-bottom: 46px;
+    }
+    .hero-title {
+        font-size: 25px;
+    }
+    .hero-text {
+        flex-basis: 0;
+    }
+    .hero {
+        margin-bottom: 76px;
+    }
+    .title-h2 {
+        font-size: 20px;
+    }
+    .text-scheduble {
+        font-size: 16px;
+    }
+    ._schedule {
+        max-width: 165px;
+    }
+    .schedule-header {
+        margin-bottom: 20px;
+    }
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 114px);
+        grid-template-areas:
+        "a"
+        "d"
+        "b"
+        "e"
+        "c"
+        "f";
+    }
+    .grid-img {
+        left: 12px;
+        bottom: 41px;
+    }
+    .grid-text {
+        font-size: 14px;
+    }
+    .grid-text {
+        top: 0px;
+        right: 12px;
+    }
+    .grid-title {
+        font-size: 14px;
+    }
+    .grid-title {
+        left: 12px;
+    }
+    ._01 {
+        width: 39px;
+        height: 39px;
+    }
+    ._02 {
+        width: 23px;
+        height: 45px;
+    }
+    ._03 {
+        width: 46px;
+        height: 25px;
+    }
+    ._04 {
+        width: 34px;
+        height: 53px;
+    }
+    ._05 {
+        width: 39px;
+        height: 37px;
+    }
+    
+    ._06 {
+        width: 35px;
+        height: 40px;
+    }
+    .schedule {
+        margin-bottom: 76px;
+    }
+
+    ._form {
+        max-width: 200px;
+        padding-bottom: 38px;
+    }
+    ._form::before {
+        width: 31px;
+        height: 31px;
+        left: -14px;
+        top: 67px;
+    }
+    .form {
+        display: block;
+    }
+    .input-form {
+        max-width: 224px;
+    }
+    .checkbox:not(:checked) + label {
+        padding-left: 0;
+    }    
+    .form-date {
+        margin-bottom: 35px;
+    }
+    .form-btn {
+        width: 100%;
+    }
+    .authorization {
+        margin-bottom: 76px;
+    }
+    .about-img {
+        display: none;
+    }
+    .about-text {
+        font-size: 16px;
+        max-width: 311px;
+    }
+    .about-block-02 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-block-02 {
+        gap: 40px;
+    }
+    .about {
+        margin-bottom: 68px;
+    }
+    .logo {
+        width: 78px;
+        height: 24px;
+    }
+    .footer-description {
+        max-width: 173px;
+        text-align: right;
+    }
+    .footer-block-01 {
+        align-items: center;
+    }
+
 }
+
+
+
