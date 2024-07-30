@@ -14,8 +14,6 @@
 body {
     font-family: "Montserrat", sans-serif;
     background: #FEFCFE;
-    padding-right: 20px;
-    padding-left: 20px;
 }
 
 .container {
@@ -25,6 +23,8 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .header-wrapper {
@@ -339,6 +339,8 @@ body {
 .authorization {
     background: var(--grey);
     margin-bottom: 158px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .form {
@@ -491,12 +493,13 @@ label a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
+    gap: 30px;
 }
 
 .about-text {
     font-size: 18px;
     color: var(--dark);
-    max-width: 483px;
+    max-width: 412px;
     padding-bottom: 34px;
 }
 
@@ -616,8 +619,7 @@ label a {
         font-size: clamp(26px, 3.5vw, 48px);
     }
     .hero-arrow {
-        width: 45px;
-        height: 45px;
+        display: none;
     }
 }
 
@@ -669,9 +671,6 @@ label a {
         right: -3vw;
         max-width: 370px;
     }
-    .hero-arrow {
-        bottom: -5vh;
-    }
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 224px);
@@ -697,6 +696,12 @@ label a {
     .about {
         margin-bottom: 76px;
     }
+    .about-img {
+        width: 65svw;
+        height: 40svh;
+        background-image: url(../img/about-girl-mini.png);
+    }
+    
     .footer-block-02{
         display: none;
     }
