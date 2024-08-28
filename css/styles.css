@@ -373,8 +373,22 @@ body {
     z-index: -1;
 }
 
+.input_label {
+    font-size: 11px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+label a {
+    font-size: 11px;
+    color: var(--dark);}
+
+.form-date {
+    width: 100%;
+}
+
 .form > div {
-    flex-basis: calc(100% - 255px - 20px);
+    flex-basis: calc(100% - 275px - 20px);
 }
 
 .form-btn {
@@ -399,7 +413,6 @@ body {
 }
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{
-    font-size: 10px;
    position: relative;
    padding-left: 35px;
    cursor:pointer;
@@ -472,15 +485,7 @@ body {
     background: #fff;
     margin-bottom: 13px;
     border: none;
-}
-
-label {
-    font-size: 11px;
-    color: var(--dark);
-}
-
-label a {
-    color: var(--dark);
+    box-sizing: border-box;
 }
 
 /* О компании */
@@ -757,22 +762,22 @@ label a {
         max-height: 328px;
     }
     .input-form {
-        max-width: 250px;
         padding: 20px;
     }
     .form {
         display: grid;
     }
     .form > div {
-        flex-basis: calc(100% - 315px - 20px);
         margin: 0 auto;
     }
     .form-btn {
         flex-basis: 200px;
         font-size: 14px;
-        max-width: 300px;
         width: 100%;
         margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 15px;
     }
     .checkbox:not(:checked) + label::before {
         width: 10px;
@@ -951,9 +956,12 @@ label a {
     .input-form {
         max-width: 224px;
     }
-    .checkbox:not(:checked) + label {
-        padding-left: 0;
-    }    
+    .input_label {
+        font-size: 8px;
+    }  
+    label a {
+        font-size: 8px;
+    }
     .form-date {
         margin-bottom: 35px;
     }
