@@ -105,6 +105,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .hero-text {
@@ -170,7 +171,6 @@ body {
     background-color: var(--yellow);
     box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
 }
-
 .hero-img {
     position: relative;
 }
@@ -501,6 +501,10 @@ label a {
     gap: 30px;
 }
 
+._title-h3-about {
+    margin: 0;
+}
+
 .about-text {
     font-size: 18px;
     color: var(--dark);
@@ -516,7 +520,7 @@ label a {
     text-align: center;
     color: var(--dark);
     font-weight: 700;
-    padding: 22px 51px;
+    padding: 22px 45px;
     background: var(--yellow);
     box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.2);
     text-decoration: none;
@@ -684,6 +688,9 @@ label a {
     .authorization {
         margin-bottom: 90px;
     }
+    .about-block-01{
+        margin-bottom: 50px;
+    }
     .about-block-02 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -699,7 +706,7 @@ label a {
     }
     .about-img {
             width: 62svw;
-            height: 73svh;
+            height: 46svh;
         background-image: url(../img/about-girl-mini.png);
     }
     
@@ -714,6 +721,8 @@ label a {
         justify-content: space-between;
         margin: 0 auto;
         padding: 20px 15px;
+        gap: 30px;
+        align-items: center;
     }
     .footer-description {
         display: block;
@@ -734,6 +743,9 @@ label a {
         padding-top: 20px;
         padding-bottom: 20px;
         border-bottom: 1px solid var(--dark);
+    }
+    ._modal-link:last-child{
+        border-bottom: none;
     }
     .nav-link::after {
         display: none;
@@ -809,7 +821,7 @@ label a {
         font-size: 20px;
     }
     .hero-link {
-        padding: 20px;
+        display: block;
         font-size: 12px;
     }
     .hero-girl {
@@ -836,11 +848,13 @@ label a {
     .grid-title {
         font-size: 15px;
     }
-    .hero-link {
-        padding: 14px;
-    }
     .about-img {
         display: none;
+    }
+    .about-link {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
     }
     .about-data {
         flex-basis: 100%;
