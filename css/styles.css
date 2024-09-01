@@ -776,6 +776,7 @@ label a {
     }
     .input-form {
         padding: 20px;
+        max-width: inherit;
     }
     .form {
         display: grid;
@@ -887,7 +888,7 @@ label a {
         font-size: 25px;
     }
     .title-h2 {
-        font-size: 20px;
+        font-size: 26px;
     }
     .text-scheduble {
         font-size: 16px;
@@ -967,9 +968,6 @@ label a {
     }
     .form {
         display: block;
-    }
-    .input-form {
-        max-width: 224px;
     }
     .input_label {
         font-size: 8px;
