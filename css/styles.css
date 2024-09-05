@@ -772,6 +772,11 @@ label a {
         height: 80px;
         bottom: 50px;
     }
+    ._02 {
+        width: 42px;
+        height: 75px;
+        bottom: 50px;
+    }
 }
 
 @media(max-width: 675px) {
@@ -853,7 +858,7 @@ label a {
         font-size: 16px;
     }
     .grid-title {
-        font-size: 14px;
+        font-size: 13px;
     }
     .about-img {
         display: none;
@@ -874,9 +879,6 @@ label a {
 @media(max-width: 415px) {
     .grid-img {
         bottom: 60px;
-    }
-    .grid-title {
-        font-size: 13px;
     }
     .grid-img._04 {
         width: 50px;
@@ -941,8 +943,6 @@ label a {
     }
     .grid-title {
         font-size: 14px;
-    }
-    .grid-title {
         left: 12px;
     }
     ._01 {
